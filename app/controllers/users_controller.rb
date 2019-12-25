@@ -9,6 +9,11 @@ class UsersController < ApplicationController
     json_response(response, :created)
   end
 
+  # GET /auth/me
+  def show
+    json_response(current_user.slice('name', 'email', 'display_image_url'))
+  end
+
   private
 
   def user_params
@@ -16,7 +21,8 @@ class UsersController < ApplicationController
       :name,
       :email,
       :password,
-      :password_confirmation
+      :password_confirmation,
+      :display_image_url
     )
   end
 end
