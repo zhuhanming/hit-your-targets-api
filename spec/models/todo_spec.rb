@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Todo, type: :model do
   # association test
@@ -7,10 +7,10 @@ RSpec.describe Todo, type: :model do
   # validation tests
   # ensure columns are present before saving
   it { should validate_presence_of(:title) }
-  it { should validate_presence_of(:description) }
+  # it { should validate_presence_of(:description) }
   it { should validate_presence_of(:start_time) }
   it { should validate_presence_of(:end_time) }
-  it { should allow_value(true).for(:completed) }  
+  it { should allow_value(true).for(:completed) }
   it { should allow_value(false).for(:completed) }
   it { should_not allow_value(nil).for(:completed) }
 end
