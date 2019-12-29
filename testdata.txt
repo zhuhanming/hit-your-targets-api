@@ -1,1 +1,18 @@
-http POST :3000/todos title=Hello description=world start_time="2015-11-05 22:32:03" end_time="2015-11-05 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NzYzNzg3MDF9.TOptTaX6Ss9-xOxY1ywWnHBTChU6YYCtU0QjUrz5cHk'
+http POST :3000/todos title=Hello description=world start_time="2015-11-05 22:32:03" end_time="2015-11-05 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=Bruh description=Moment start_time="2015-11-05 22:32:03" end_time="2017-11-05 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=Scrub description=Bedodo start_time="2015-11-05 22:32:03" end_time="2016-11-05 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=superlongnameknsnsljnsflbsfblfsblfsbflbfbnfbdsbsdbsdbs description=Bedodo start_time="2015-11-05 22:32:03" end_time="2016-11-05 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=More description=Stuff start_time="2015-11-05 22:32:03" end_time="2019-12-29 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http PATCH :3000/todos/3 completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+
+http POST :3000/todos title=superlongnameknsnsljnsflbsfblfsblfsbflbfbnfbdsbsdbsdbs description=Bedodo start_time="2019-11-05 22:32:03" end_time="2019-12-29 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=superlongnameknsnsljnsflbsfblfsblfsbflbfbnfbdsbsdbsdbs description=Bedodo start_time="2019-11-05 22:32:03" end_time="2019-12-30 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
+
+http POST :3000/todos title=superlongnameknsnsljnsflbsfblfsblfsbflbfbnfbdsbsdbsdbs description=Bedodo start_time="2019-11-05 22:32:03" end_time="2019-12-28 22:32:03" completed=false Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1Nzc2MDExMDB9.pRgkEQA3x7eUrBBOfI-wQKM9eaT1aEOc9WS58LBozDY'
