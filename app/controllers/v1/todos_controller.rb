@@ -30,7 +30,7 @@ module V1
     # DELETE /todos/:id
     def destroy
       @todo.destroy
-      head :no_content
+      json_response(params[:id])
     end
 
     private
