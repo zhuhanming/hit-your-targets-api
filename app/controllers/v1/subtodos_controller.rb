@@ -22,13 +22,13 @@ module V1
     # PUT /todos/:todo_id/subtodos/:id
     def update
       @subtodo.update(subtodo_params)
-      head :no_content
+      json_response(@todo)
     end
 
     # DELETE /todos/:todo_id/subtodos/:id
     def destroy
       @subtodo.destroy
-      head :no_content
+      json_response(@todo)
     end
 
     private
