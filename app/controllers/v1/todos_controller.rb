@@ -37,7 +37,7 @@ module V1
 
     def todo_params
       # whitelist params
-      params.permit(:title, :description, :start_time, :end_time, :completed, :complete_time)
+      params.permit(:title, :description, :start_time, :end_time, :completed, :complete_time, :tags)
     end
 
     def set_todo
