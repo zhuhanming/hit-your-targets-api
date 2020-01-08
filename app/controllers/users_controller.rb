@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   # GET /auth/me
   def show
-    json_response(current_user.slice("name", "email", "display_image_url"))
+    json_response(current_user.slice("name", "email", "display_image_url", "preferences"))
   end
 
   private
@@ -27,7 +27,8 @@ class UsersController < ApplicationController
       :email,
       :password,
       :password_confirmation,
-      :display_image_url
+      :display_image_url,
+      :preferences
     )
   end
 end

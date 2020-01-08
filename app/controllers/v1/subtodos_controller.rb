@@ -34,7 +34,7 @@ module V1
     private
 
     def subtodo_params
-      params.permit(:title, :start_time, :end_time, :completed)
+      params.permit(:id, :todo_id, :title, :start_time, :end_time, :completed)
     end
 
     def set_todo
