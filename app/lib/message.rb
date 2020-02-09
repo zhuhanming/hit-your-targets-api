@@ -31,6 +31,14 @@ class Message
     "Account could not be created"
   end
 
+  def self.password_does_not_match
+    "Old password does not match"
+  end
+
+  def self.password_changed
+    "Password changed successfully"
+  end
+
   def self.expired_token
     "Sorry, your token has expired. Please login to continue."
   end
