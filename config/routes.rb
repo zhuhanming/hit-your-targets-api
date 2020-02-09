@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   post "signup", to: "users#create"
   patch "update_user", to: "users#update_user"
   patch "update_user_password", to: "users#update_user_password"
-  get "", to: "application#show"
+  get "", to: "application#show_default"
 end
