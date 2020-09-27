@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_02_08_191847) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.boolean "completed"
-    t.integer "todo_id", null: false
+    t.bigint "todo_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["todo_id"], name: "index_subtodos_on_todo_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_02_08_191847) do
     t.boolean "completed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "complete_time"
     t.text "tags", default: [], null: false, array: true
     t.index ["user_id"], name: "index_todos_on_user_id"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 2020_02_08_191847) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "display_image_url"
     t.jsonb "preferences", default: {}, null: false
-    t.integer "incomplete_order", default: [], array: true
-    t.integer "complete_order", default: [], array: true
+    t.integer "incomplete_order", default: [], null: false, array: true
+    t.integer "complete_order", default: [], null: false, array: true
   end
 
   add_foreign_key "subtodos", "todos"
