@@ -101,8 +101,8 @@ RSpec.describe 'Subtodos API' do
     before { put "/todos/#{todo_id}/subtodos/#{id}", params: valid_attributes, headers: headers }
 
     context 'when subtodo exists' do
-      it 'returns status code 204' do
-        expect(response).to have_http_status(204)
+      it 'returns status code 200' do
+        expect(response).to have_http_status(200)
       end
 
       it 'updates the subtodo' do
@@ -128,8 +128,8 @@ RSpec.describe 'Subtodos API' do
   describe 'DELETE /todos/:id' do
     before { delete "/todos/#{todo_id}/subtodos/#{id}", params: {}, headers: headers }
 
-    it 'returns status code 204' do
-      expect(response).to have_http_status(204)
+    it 'returns status code 200' do
+      expect(response).to have_http_status(200)
     end
   end
 end
