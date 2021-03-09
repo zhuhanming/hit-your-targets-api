@@ -23,6 +23,8 @@ jobs:
         # Docker Hub image
         image: postgres
         env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
           POSTGRES_DB: hit_your_targets_api_test
         # Set health checks to wait until postgres has started
         options: >-
@@ -43,9 +45,26 @@ jobs:
         # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
         # change this to (see https://github.com/ruby/setup-ruby#versioning):
         # uses: ruby/setup-ruby@v1
-        uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: Run tests
-        run: bundle exec rake
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get -yqq install libpq-dev
+      - name: Build App
+        env:
+          PGHOST: localhost
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          RAILS_ENV: test
+        run: |
+          bin/rails db:setup
+      - name: Run Tests
+        env:
+          PGHOST: localhost
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          RAILS_ENV: test
+        run: |
+          bundle exec rspec
