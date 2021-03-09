@@ -22,6 +22,10 @@ jobs:
       postgres:
         # Docker Hub image
         image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: hit_your_targets_api_test
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
